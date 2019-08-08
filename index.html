@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Magic Beans</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <style>
     body{
@@ -14,16 +12,21 @@
         font-family: 'Courier New', Courier, monospace;
         background-color: whitesmoke;
     }
-    .box {
-        margin-top: 60px;
+    .box{
         width: 350px;
-        height: 100px;
+        height: 350px;
         border: solid 1.5px black;
-        display: inline-block;
         cursor:pointer;
+        display: inline-block;
     }
-    .box1 p{
-        font-size: 35px;
+    .box p{
+        font-size: 45px;
+    }
+    .box:hover{
+        border: salmon 1px solid;
+        transform: scale(1.2);
+        transition: ease-in .5s;
+        transform: rotateY(360deg);
     }
 </style>
 <body>
@@ -39,7 +42,8 @@
     </div>
 </body>
 <script>
-  
+  let squares = document.querySelectorAll('.box');
+  console.log(squares)
     
     
 </script>
