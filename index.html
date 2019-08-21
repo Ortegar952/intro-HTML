@@ -19,11 +19,12 @@
         cursor:pointer;
         display: block;
         margin-left: 35%;
-        margin-top: 20px;
+        margin: 10% auto;
     }
     .box p{
         font-size: 35px;
         margin-top:30%;
+        color:white;
     }
     .box:hover{
         border: salmon 1px solid;
@@ -34,25 +35,28 @@
 <body>
     <h1> Magic Beans</h1>
     <div class='box 1 ' id='square1'>
-        <p>Click Me</p>
+        <!-- <p>Click Me</p> -->
     </div>
-    <div class='box 2' id='square2' >
+ <!--    <div class='box 2' id='square2' >
         <p>No...Click Me</p>
     </div>
     <div class='box 3' id='square3' >
         <p>Noooo !!!Click Me Instead</p>
-    </div>
+    </div> -->
 </body>
 <script>
  let square1 = document.querySelector('#square1')
- let square2 = document.querySelector('#square2')
- let square3 = document.querySelector('#square3')
-
- square1.onclick((event)=>{
-     console.log('Im alive')
- })
-    
-    
+ let randomColors = ['#FF7893','#E8266D','#FFE678','#062C6D','#EDBD1F'];
+ //document.body.style.backgroundColor = "red";
+ function RandomColor(){
+    let size = randomColors.length;
+    console.log(size)
+    let color = Math.floor(Math.random() * size);
+    square1.style.backgroundColor = randomColors[color];
+ }
+ square1.addEventListener('click',function(){
+    RandomColor();
+ })  
 </script>
 
 </html>
