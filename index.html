@@ -50,13 +50,12 @@
  //document.body.style.backgroundColor = "red";
  function RandomColor(){
     let size = randomColors.length;
-    console.log(size)
+    //console.log(size)
     let color = Math.floor(Math.random() * size);
     square1.style.backgroundColor = randomColors[color];
+    console.log(color);
  }
- square1.addEventListener('click',function(){
-    RandomColor();
- })  
+ square1.addEventListener('click', RandomColor)  
 </script>
 
 </html>
